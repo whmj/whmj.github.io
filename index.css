@@ -1,0 +1,62 @@
+body{
+	background: url(images/bg.jpg);
+}
+header{
+	position:relative;
+	top:60px;
+	left: 175px;
+
+}
+header h1{ font-size:36px; text-shadow:#fff 1px 1px 1px; font-family:'Arizonia', cursive;}
+header p{margin:17px 0 0 0;text-shadow:#000 1px 1px 1px;color:#fff}
+a{
+	color: #E3E3E5;
+	font-size: 20px;
+}
+.one:hover{color: #4D9683;}
+.two:hover{color: #BE6C95;}
+.three:hover{color: #BA9D5E;}
+.four:hover{color: #5E9EB4;}
+.center{
+	position: relative;
+	top:150px;
+	left: 100px;
+}
+.center ul li{
+	float: left;
+	border-radius:30px;
+	padding:70px;
+	margin-left: 20px;
+}
+.center ul li:hover{
+    border-radius:0px;
+}
+.center ul li:nth-child(1){
+	padding:70px 58px;
+	background-color: #51C9A7;
+	border: 10px solid #549E89; 
+}
+.center ul li:nth-child(2){
+	
+	background-color: #E67B9C;
+	border: 10px solid #E499B0; 
+}
+.center ul li:nth-child(3){
+	
+	background-color: #F0CD78;
+	border: 10px solid #DCC999; 
+}
+.center ul li:nth-child(4){
+	
+	background-color: #7EC9E3;
+	border: 10px solid #A2CFDE; 
+}
+footer{
+	position: relative;
+    top:450px;
+    left:-600px;     
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:#BBB4A2;
+}

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>MT网管理</title>
+     <link rel="stylesheet" type="text/css" href="css/base.css">
+     <link rel="stylesheet" type="text/css" href="css/common.css">
+     <link rel="icon" type="image/gif" href="images/web.ico">
+     <script src="js/jquery.1.4.2-min.js" type="text/javascript"></script>     
+</head>
+<body>
+     <header>
+          <div class="top">
+               <div class="logo fl">MT网后台管理</div>
+                  <div class="topRight fr">
+                  <a href="#" class="return">返回首页</a>
+                  <a href="#" class="logout">注销</a>
+               </div>
+          </div>
+     </header>
+
+     <article>
+     <!-- 中间总区域 -->
+         <div class="main">
+         <!-- 左边导航条 -->
+          <div class="left fl">
+              <h3 class="homepage">首页</h3>
+               <h3 class="tit" >用户管理</h3>
+                  <ul class="listUser hide" >
+                    <li> 
+                       <a href="#" >用户注册</a>
+                     </li>
+                  <li>
+                     <a href="#" >网站信息</a>
+                  </li>
+                 </ul>
+               <h3 class="tit ">商品管理</h3>
+               <ul class="listGoods hide">
+               <li><a href="#">商品信息添加</a></li>
+            <li><a href="#">商品信息维护</a></li>
+               </ul>
+               <h3 class="tit">订单管理</h3>
+               <ul class="listIndent hide">
+               <li><a href="#">订单审核</a></li>
+            <li><a href="#">订单查询</a></li>
+               </ul>
+               <h3 class="tit">评论管理</h3>
+               <ul class="listComment hide">
+               <li><a href="#">评论审核</a></li>
+            <li><a href="#">评论查询</a></li>
+               </ul>
+               <h3 class="tit">权限管理</h3>
+               <ul class="listLimit hide">
+               <li><a href="#">权限列表</a></li>
+               </ul>
+               <h3 class="tit">高级类别管理</h3>
+               <ul class="listType hide">
+               <li><a href="#">商品类别</a></li>
+               </ul>
+               </div><!-- left结束 -->
+               <!-- 首页 -->
+               <div class="index">
+                    <h1 class="home_index">
+                      <i>欢迎admin进入后台管理系统!</i>
+                    </h1>
+                    <h1 class="home_tit">
+                      <i>Welcome to the backstage management system!</i>
+                    </h1>
+                    <img src="images/2015-08-09_22384.png" />
+                    <img src="images/2015-08-09_223840.png" />
+                    <img src="images/2015-08-09_223804.png" />
+               </div>
+          <!-- 用户注册 -->
+                           
+          <div class="right">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>用户查询</legend>
+                              <label for="" >用户名：</label>
+                              <input type="text"  class="user"/>
+                              用户类型：
+                              <select class="userAll">
+                                  <option >  邮箱 </option>
+                                   <option>用户名</option>
+                                   <option>权限</option>
+                              </select><br/>
+                              <label for="">权&nbsp;&nbsp;&nbsp;限：</label>
+                              <input type="text" class="user" id="ad" />
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                              <a href="#" class="addBnt" id="addBnt">用户添加</a>
+                            
+                         </fieldset>
+                         </form>
+                         <!-- 用户添加 -->
+                         <div class="addAll hide" id="addAll">
+                          <div class="addUser hide" id="addUser" draggable="true">
+                                <div class="header"><h3>用户添加</h3>
+                                <button class="addBut" id="addBut">X</button>
+                                </div>
+                                <form action="xx" method="post">
+                                <table class="addTable">
+                                  <tbody>
+                                    <tr>
+                                      <td class="addTr tr">用户名:</td>
+                                      <td>
+                                        <input type="text" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="addTr tr">邮&nbsp;&nbsp;&nbsp;箱:</td>
+                                      <td>
+                                        <input type="text" />
+                                      </td>
+                                    </tr>
+                                     <tr>
+                                      <td class="tr">性&nbsp;&nbsp;&nbsp;别:</td>
+                                      <td>
+                                        <input type="radio" name="sex" value="男" checked />男
+                                        <input type="radio" name="sex" value="女" />女
+                                      </td>
+                                       </tr>
+                                        <tr>
+                                      <td class="tr">注册日期:</td>
+                                      <td>
+                                        <input type="date" name="date" value="2012-08-03"  />
+                                      </td>
+                                     </tr> 
+                                     <tr>
+                                       <td class="tr"></td>
+                                         <td><input type="submit" value="确定" class="but" /><input type="reset" value="取消" class="but mr20" /></td>
+                                     </tr>        
+                                  </tbody>
+                                </table>
+                                </form>
+                              </div> 
+                              </div><!-- 用户添加结束 -->
+                         <div class="userList">
+                         <h3 class="titList">用户注册列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>用户名</th>
+                                        <th>密码</th>
+                                        <th>性别</th>
+                                        <th>邮箱</th>
+                                        <th>购物总数</th>
+                                        <th>账户状态</th>
+                                        <th>注册日期</th>
+                                        <th>权限</th>
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                       <td>admin</td>
+                                       <td>1111</td>
+                                       <td>男</td>
+                                       <td>644849295@qq.com</td>
+                                       <td>123</td>
+                                       <td>在线</td>
+                                       <td>2015-07-07</td>
+                                       <td>管理员</td>
+                                       <td>
+                                          <a href="#">
+                                            <img src="images/write.png" />
+                                          </a>
+                                       </td>
+                                       <td>
+                                          <a href="#">
+                                            <img src="images/delete.png" />
+                                          </a>
+                                       </td>
+                                   </tr>   
+                                   <tr>
+                                       <td>bbbbb</td>
+                                       <td>1111</td>
+                                       <td>男</td>
+                                       <td>644849295@qq.com</td>
+                                       <td>123</td>
+                                       <td>在线</td>
+                                       <td>2015-07-07</td>
+                                       <td>管理员</td>
+                                       <td>
+                                          <a href="#">
+                                            <img src="images/write.png" />
+                                          </a>
+                                       </td>
+                                       <td>
+                                          <a href="#">
+                                            <img src="images/delete.png" />
+                                          </a>
+                                       </td>
+                                   </tr>                      
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                              <button type="submit" class="bnt">上一页</button>
+                              <button type="submit" class="bnt">上一页</button>第
+                              <input type="text" class="page" />页
+                              <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+     <!-- 网站信息 -->
+     <div class="webInf" style="display:none;">
+          <form action="XX" method="XX">
+               <table class="listTable tl">
+                    <thead>
+                         <h3 class="titList">网站的基本信息</h3>
+                    </thead>
+                    <tbody>
+                         <tr><td>注册用户总数：3742</td></tr>
+                         <tr><td>注册会员人数：5867</td></tr>
+                         <tr><td>浏览人次：3160</td></tr>
+                         <tr><td>已购买人数：5564</td></tr>
+                         <tr><td>点击量：0</td></tr>
+                    </tbody>
+               </table>
+               </form>
+          </div><!-- webInf结束 -->
+          </div><!-- right结束 -->
+        <!-- 商品信息添加 -->
+          <div class="rightOne">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>商品查询</legend>
+                              <label for="" >商品名：</label>
+                              <input type="text"  class="user"/>
+                              商品类型：
+                              <select class="userAll">
+                                  <option >全部</option>
+                                  <option>商品名称</option>
+                                   <option>类别</option>                               
+                                   <option>价格</option>
+                              </select><br/>
+                              <label for="">价&nbsp;&nbsp;&nbsp;格：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                              <a href="#" class="addBnt" id="addGoods">商品添加</a>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">商品信息列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>商品名称名</th>
+                                        <th>价格</th>
+                                        <th>类别</th>
+                                        <th>库存</th>
+                                        <th>描述信息</th>
+                                        <th>产地</th>
+                                        <th>销量</th>
+                                        <th>图片</th>
+                                        <th>热度</th>
+                                        <th>上架日期</th>
+                                        <th>下架日期</th>
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>小米</td>
+                                   <td>2000</td>
+                                   <td>**</td>
+                                   <td>1000</td>
+                                   <td>****</td>
+                                   <td>上海</td>
+                                   <td>50</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td>hot</td><td>2015-07-07</td>
+                                   <td>2015-07-07</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>                                   
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+     <!-- 商品信息维护 -->
+     <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>商品查询</legend>
+                              <label for="" >商品名：</label>
+                              <input type="text"  class="user"/>
+                              商品类型：
+                              <select class="userAll">
+                                  <option >  全部 </option>
+                                  <option>商品名称</option>
+                                  <option>类别</option>                               
+                                  <option>价格</option>
+                              </select><br/>
+                              <label for="">价&nbsp;&nbsp;&nbsp;格：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                              <a href="#" class="addBnt">商品添加</a>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">商品信息列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>商品名称名</th>
+                                        <th>价格</th>
+                                        <th>类别</th>
+                                        <th>库存</th>
+                                        <th>描述信息</th>
+                                        <th>产地</th>
+                                        <th>销量</th>
+                                        <th>图片</th>
+                                        <th>热度</th>
+                                        <th>上架日期</th>
+                                        <th>下架日期</th>
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr><td>小米</td>
+                                   <td>2000</td>
+                                   <td>**</td>
+                                   <td>1000</td>
+                                   <td>****</td>
+                                   <td>上海</td>
+                                   <td>50</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td>hot</td>
+                                   <td>2015-07-07</td>
+                                   <td>2015-07-07</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>                    
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+          </div><!-- rightOne结束 -->
+       <!-- 订单审核 -->
+          <div class="rightTwo">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>订单查询</legend>
+                              <label for="" >&nbsp;&nbsp;&nbsp;用户名：</label>
+                              <input type="text"  class="user"/>
+                              订单类型：
+                              <select class="userAll">
+                                  <option >  全部 </option>
+                                   <option>用户名</option>
+                                   <option>订单编号</option>
+                              </select><br/>
+                              <label for="">订单编号：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">订单管理列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>用户名</th>
+                                        <th>订单编号</th>
+                                        <th>商品数</th>
+                                        <th>总价格</th>
+                                        <th>订单状态</th>
+                                        <th>注册日期</th>
+                                        <th>订单详情</th>                                
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>小小溪</td>
+                                   <td>123456</td>
+                                   <td>5</td>
+                                   <td>2000</td>
+                                   <td>未提交</td>
+                                   <td>2015-07-07</td>
+                                   <td>********</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>
+                                   <tr>
+                                   <td>小小溪</td>
+                                   <td>123456</td>
+                                   <td>5</td>
+                                   <td>2000</td>
+                                   <td>未提交</td>
+                                   <td>2015-07-07</td>
+                                   <td>********</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>               
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+             <!-- 订单查询 -->
+              <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>订单查询</legend>
+                              <label for="" >&nbsp;&nbsp;&nbsp;用户名：</label>
+                              <input type="text"  class="user"/>
+                              订单类型：
+                              <select class="userAll">
+                                  <option >全部</option>
+                                   <option>用户名</option>
+                                   <option>订单编号</option>
+                              </select><br/>
+                              <label for="">订单编号：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">订单管理列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>用户名</th>
+                                        <th>订单编号</th>
+                                        <th>商品数</th>
+                                        <th>总价格</th>
+                                        <th>订单状态</th>
+                                        <th>注册日期</th>
+                                        <th>订单详情</th>                                
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>小小溪</td>
+                                   <td>123456</td>
+                                   <td>5</td>
+                                   <td>2000</td>
+                                   <td>未提交</td>
+                                   <td>2015-07-07</td>
+                                   <td>********</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>               
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+          </div><!-- rightTwo结束 -->
+       <!-- 评论审核 -->
+          <div class="rightThree">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>评论审核</legend>
+                              <label for="" >商品名：</label>
+                              <input type="text"  class="user"/>
+                              评价类型：
+                              <select class="userAll">
+                                  <option >  全部 </option>
+                                   <option>商品名</option>
+                                   <option>用户名</option>
+                              </select><br/>
+                              <label for="">权&nbsp;&nbsp;&nbsp;限：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">评论审核列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>商品名称</th>
+                                        <th>评价用户名</th>
+                                        <th>评价内容</th>
+                                        <th>评价日期</th>                                     
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>小米3</td>
+                                   <td>小小溪</td>
+                                   <td>*******</td>
+                                   <td>2015-07-07</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>
+                                   <tr>
+                                   <td>小米3</td>
+                                   <td>小小溪</td>
+                                   <td>*******</td>
+                                   <td>2015-07-07</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>               
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+             <!-- 评论查询 -->
+              <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>用户查询</legend>
+                              <label for="" >用户名：</label>
+                              <input type="text"  class="user"/>
+                              用户类型：<select class="userAll">
+                                  <option >  邮箱 </option>
+                                   <option>用户名</option>
+                                   <option>权限</option>
+                              </select><br/>
+                              <label for="">权&nbsp;&nbsp;&nbsp;限：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">用户注册列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>用户名</th>
+                                        <th>订单编号</th>
+                                        <th>商品数</th>
+                                        <th>总价格</th>
+                                        <th>订单状态</th>
+                                        <th>注册日期</th>
+                                        <th>订单详情</th>                                     
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>小小溪</td>
+                                   <td>123456</td>
+                                   <td>5</td>
+                                   <td>2000</td>
+                                   <td>未提交</td>
+                                   <td>2015-07-07</td>
+                                   <td>********</td>
+                                   <td><img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>               
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+          </div><!-- rightThree结束 -->
+       <!-- 权限管理 -->        
+       <div class="rightFour">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>权限查询</legend>
+                              <label for="" >权限名：</label>
+                              <input type="text"  class="user"/>
+                              权限类型：
+                              <select class="userAll">
+                                  <option >  全部 </option>
+                                   <option>权限名</option>
+                                   <option>权限代号</option>
+                              </select><br/>
+                              <label for="">代&nbsp;&nbsp;&nbsp;号：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                              <a href="#" class="addBnt">权限添加</a>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">权限管理列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>权限名称</th>
+                                        <th>权限代号</th>                                     
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                   <td>管理员</td>
+                                   <td>01</td><td>
+                                   <img src="images/write.png" /></td>
+                                   <td><img src="images/delete.png" /></td>
+                                   </tr>
+                                   <tr>
+                                   <td>管理员</td>
+                                   <td>01</td>
+                                   <td><img src="images/write.png" />
+                                   </td><td><img src="images/delete.png" /></td>
+                                   </tr>               
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+               </div><!-- rightFour结束 -->
+         <!-- 权限管理 -->        
+         <!-- 商品类别管理 --> 
+       <div class="rightFive">
+               <div class="rightUser hide">
+                    <div class="userLogin">
+                    <form action="XX" method="XXX">
+                         <fieldset class="search">
+                              <legend>商品查询</legend>
+                              <label for="" >商品类别名：</label>
+                              <input type="text"  class="user"/>
+                              商品类型：<select class="userAll">
+                                  <option >  全部 </option>
+                                   <option>类别名</option>
+                                   <option>类别代号</option>
+                              </select><br/>
+                              <label for="">&nbsp;&nbsp;&nbsp;类别代号：</label>
+                              <input type="text" class="user"/>
+                              <input type="submit" value="查询" class="bnt" />
+                              <input type="reset" value="取消" class="bnt"/>
+                              <a href="#" class="addBnt">商品添加</a>
+                         </fieldset>
+                         </form>
+                         <div class="userList">
+                         <h3 class="titList">商品类别列表</h3>
+                         <table class="listTable tc">
+                              <thead>
+                                   <tr>
+                                        <th>类别名</th>
+                                        <th>类别代号</th>
+                                        <th>详细</th>                                       
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                       <td>小米</td>
+                                       <td>01</td>
+                                       <td>*********</td>
+                                       <td><img src="images/write.png" /></td>
+                                       <td><img src="images/delete.png" /></td>
+                                    </tr>
+                                    <tr>
+                                       <td>小米</td>
+                                       <td>01</td>
+                                       <td>*********</td>
+                                       <td><img src="images/write.png" /></td>
+                                       <td><img src="images/delete.png" /></td>
+                                    </tr>              
+                              </tbody>
+                         </table>
+                         <div class="bottom">
+                         <button type="submit" class="bnt">上一页</button>
+                         <button type="submit" class="bnt">上一页</button>第
+                         <input type="text" class="page" />页
+                         <button type="submit" class="bnt">确定</button>     
+                         </div>
+                         </div><!-- userList结束 -->
+                    </div><!-- userLogin结束 -->
+               </div><!-- rightUser结束 -->
+               </div><!-- rightFour结束 -->
+          </div><!-- main结束 -->
+     </article>
+     <!-- <footer > -->
+     <div class="foot">
+     Copyright © 2015 MT网版权所有</div>
+     <!-- </footer> -->
+</body>
+<script src="js/admin.js" type="text/javascript" ></script>
+<script src="js/add.js" type="text/javascript" ></script>
+</html>

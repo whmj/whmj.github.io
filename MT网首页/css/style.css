@@ -1,0 +1,162 @@
+body, * {
+    margin:0;
+    padding: 0;
+    font-family: "Microsoft YaHei" ! important;
+    font-size:12px;
+    color: #959591;
+}
+img{border:none;}
+#header {
+	width: 100%;
+	background-color: #1D7AD9;
+	height: 85px;
+	margin: 0 auto;
+}
+.logo {
+	height: 85px;
+	width: 350px;
+	margin-left: 300px;
+	background: url(../images/logo2.png) no-repeat 5px;
+}
+.logo span {
+	font-size: 21px;
+	color: #fff;
+	position: relative;
+	top: 40px;
+	left: 130px;
+}
+
+#header .login {
+	width: 200px;
+	height: 80px;
+	  margin-top: -80px;
+	float: right;
+}
+#header .login span {
+	font-size: 12px;
+	color: #fff;
+	position: relative;
+	top: 30px;
+}
+#header .login button {
+	width: 64px;
+	height: 32px;
+	border: 1px solid #e8e8e8;
+	background: #fafafa;
+	border-radius: 3px 3px 3px 3px;
+	position: relative;
+	top: 28px;
+	left: 10px;
+	cursor: pointer;
+}
+#header .login a {
+	font-size: 12px;
+	color: #666;
+	font-weight: bold;
+}
+#main {
+	width: 1000px;
+	height: 332px;
+	margin: 0 auto;
+	margin-left: 500px;
+	margin-top: 65px;
+}
+#main .reg_main {
+	width: 720px;
+	height: 332px;
+	/*float: left;*/
+
+}
+
+.label_main label {
+	height: 42px;
+	width: 65px;
+	margin-right: 10px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+	text-align: right;
+	/*float: left;*/
+
+}
+.label_main input {
+	position: relative;
+	height: 15px;
+	width: 260px;
+	border-radius:5px;
+	padding: 11px 10px 11px 10px;
+	border: 1px solid #1D7AD9;
+	font-size: 14px;
+	color: #666;
+
+}
+.label_main {
+	width: 720px;
+	height: 42px;
+	margin-top: 20px;
+
+}
+.pic_check {
+	display: block;
+	width: 100px;
+	height: 38px;
+	border: 1px solid #ddd;
+	float: left;
+	margin-left: 10px;
+}
+#main .check_main {
+	width: 153px;
+	float: left;
+}
+.label_main a {
+	text-decoration: none;
+	position: relative;
+	top: 0px;
+	left: 10px;
+	color: #1cabb4;
+}
+.label_main a:hover {
+	text-decoration: underline;
+}
+.agree_main {
+	width: 328px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 75px;
+	margin-top: 25px;
+}
+.agree_main input {
+	float: left;
+	margin-top: 5px;
+}
+.agree_main label {
+	margin-left: 5px;
+	color: #666;
+}
+.agree_main a {
+	text-decoration: none;
+	color: #1cabb4;
+}
+.agree_main a:hover {
+	text-decoration: underline;
+}
+.sub_main1,.sub_main2 {
+	width: 95px;
+	height: 37px;
+	overflow: hidden;
+	cursor: pointer;
+	color: gray;
+	background-color: #1D7AD9;
+	border: 1px solid gray;
+	color: #fff;
+	font-size: 15px;
+	margin-top: 30px;
+}
+.sub_main1{margin-left: 70px;}
+.sub_main2{margin-left: 20px;}
+
+
+
+
+
